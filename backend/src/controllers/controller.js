@@ -80,3 +80,18 @@ export const deleteUser = async (req, res) => {
 };
 
 // Update data from database
+export const updateUser = async (req, res) => {
+  const db = getDB();
+  const {id} = req.params;
+  const {name,nim,email,phone} = req.body;
+
+  try{
+    const [result] = await db.query("UPDATE users SET name = ?, nim = ?, email = ?, phone = ? WHERE id = ?", [name,nim,email,phone,id])
+    if (result.affectedRows === 0){
+      return res.status(404).json({message: "Sory Data Not Found"})
+    }
+    return res.status(201).json({message: "Data Updated successfully",  data: [{id, name, nim, email, phone}]})
+  }catch{
+    return res.status(500).json({Error: "Update wes failed"})
+  }
+}

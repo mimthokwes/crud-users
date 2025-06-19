@@ -12,5 +12,5 @@ app.use('/api/users',userRoutes)
 
 app.listen(3000, () => {
     connectDB();
-    console.log('server berjaan di server dengan port: 3000')
+    console.log('berjaan di server dengan port: 3000')
 })
