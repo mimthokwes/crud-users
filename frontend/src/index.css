@@ -4,8 +4,8 @@
   font-weight: 400;
 
   color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  color: rgba(51, 51, 51, 0.87);
+  background-color: white;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -19,8 +19,6 @@
 
 body {
   margin: 0;
-  display: flex;
-  place-items: center;
   min-width: 320px;
   min-height: 100vh;
 }
@@ -28,5 +26,22 @@ body {
 h1 {
   font-size: 3.2em;
   line-height: 1.1;
+  color: black;
 }
 
+
+.label {
+  position: absolute;
+  background-color:aqua;
+  margin: 5px;
+  width: 110px;
+  height: 30px;
+  border-radius: 10px;
+
+}
+.card {
+  height: 250px;
+  width: 200px;
+  background-color: #e9e7e7;
+  clip-path: path("M 10,40 L 110,40 A 10,10 0,0,0 120,30 L 120,10 A 10,10 0,0,1 130,0 L 190,0 A 10,10 0,0,1 200,10 L 200,240 A 10,10 0,0,1 190,250 L 10,250 A 10,10 0,0,1 0,240 L 0,50 A 10,10 0,0,1 10,40 Z");
+}

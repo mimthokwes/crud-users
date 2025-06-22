@@ -1,17 +1,19 @@
-import './App.css'
-import {BrouserRouter, Routes, Route} from "react-router-dom";
-import UserList from '.\pages\UserList.jsx'
+import {BrowserRouter, Routes, Route} from "react-router";
+import UserList from './pages/UserList.jsx'
+import Home from './pages/homePage.jsx'
 
 
 function App() {
 
   return (
     <>
-    <BrouserRouter>
+    <BrowserRouter>
     <Routes>
-      <Route path='/' element={<UserList/>}/>
+      <Route path='/' element={<Home/>}/>
+      <Route path='/home' element={<Home/>}/>
+      <Route path='/students' element={<UserList/>}/>
     </Routes>
-    </BrouserRouter>
+    </BrowserRouter>
     </>
   )
 }
